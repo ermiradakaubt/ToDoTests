@@ -15,6 +15,10 @@ describe('Todo Web Page Testing', () => {
 
         await TodoPage.markCompleted()
         await TodoPage.checkExistingTodos()
+        await expect(SecurePage.textInFrame).toHaveTextContaining('All');
+        await expect(SecurePage.textInFrame).toHaveTextContaining('Active');
+
+        await expect(SecurePage.textInFrame).toHaveTextContaining('2 items left');
 
     });
 
