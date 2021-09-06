@@ -58,7 +58,7 @@ class TodoPage extends Page {
     async checkExistingTodos() {
         await browser.pause(2000)
         console.log('------------------------');
-        console.log(await $$('div [class="todo-list"]').children[1])
+        console.log(await this.todoList.children[1])
 
 
 
